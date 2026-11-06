@@ -1,0 +1,254 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 20px;
+  color: #fff;
+  background: var(--color-navy);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 11px;
+  color: var(--color-navy);
+  background: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.topbar-label {
+  color: #d7e2ec;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.main-content {
+  display: grid;
+  width: min(100% - 32px, 1000px);
+  gap: 22px;
+  margin: 0 auto;
+  padding: 36px 0 52px;
+}
+
+.welcome {
+  padding: 4px 2px 2px;
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: var(--color-teal);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 660px;
+  margin-bottom: 12px;
+  color: var(--color-navy);
+  font-size: clamp(2rem, 8vw, 3.25rem);
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+}
+
+.welcome-copy {
+  max-width: 610px;
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.location-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 17px 16px;
+  border: 1px solid #d9e6eb;
+  border-radius: 14px;
+  background: #f6fafb;
+}
+
+.notice-indicator {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+  margin-top: 5px;
+  border: 2px solid #8294a4;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.location-notice h2 {
+  margin-bottom: 5px;
+  color: var(--color-navy);
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.location-notice p {
+  margin-bottom: 0;
+  color: #53697d;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.workspace-card {
+  padding: 20px 16px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--color-surface);
+  box-shadow: 0 10px 30px rgb(20 43 69 / 5%);
+}
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.card-heading .eyebrow {
+  margin-bottom: 6px;
+}
+
+.card-heading h2 {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: var(--color-navy);
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.setup-label {
+  flex: 0 0 auto;
+  padding: 6px 8px;
+  border-radius: 99px;
+  color: #53697d;
+  background: #eaf0f5;
+  font-size: 0.65rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.workspace-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.workspace-item {
+  min-height: 115px;
+  padding: 15px;
+  border: 1px solid #e3eaf0;
+  border-radius: 13px;
+  background: #fbfcfd;
+}
+
+.item-number {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--color-teal);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.workspace-item h3 {
+  margin-bottom: 5px;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+}
+
+.workspace-item p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: auto;
+  padding: 17px 20px;
+  color: #52677b;
+  background: #dfe7ed;
+  font-size: 0.73rem;
+  line-height: 1.45;
+}
+
+.footer span:first-child {
+  color: var(--color-navy);
+  font-weight: 750;
+}
+
+@media (min-width: 720px) {
+  .topbar {
+    min-height: 76px;
+    padding: 0 max(28px, calc((100vw - 1000px) / 2));
+  }
+
+  .main-content {
+    gap: 26px;
+    padding-top: 54px;
+  }
+
+  .location-notice {
+    max-width: 760px;
+    padding: 18px 20px;
+  }
+
+  .workspace-card {
+    padding: 25px;
+  }
+
+  .workspace-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .workspace-item {
+    min-height: 145px;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: max(28px, calc((100vw - 1000px) / 2));
+  }
+}
